@@ -1,0 +1,22 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  generateName: express-assignment-app-pr-
+spec:
+  pipelineRef:
+    name: nodejs-assignment-pipeline
+  serviceAccountName: build-bot
+  params:
+    - name: source-repo
+      value:  https://github.com/jigneshkvp/express-assignment-app.git
+    - name: image-repo
+      value: quay.io/jigneshkvp/express-assignment-app
+  workspaces:
+    - name: shared-area
+      volumeClaimTemplate:
+        spec:
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 1Gi
