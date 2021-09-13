@@ -8,7 +8,7 @@ spec:
   serviceAccountName: build-bot
   params:
     - name: source-repo
-      value:  https://github.com/jigneshkvp/express-assignment-app.git
+      value: https://github.com/cloud-native-garage-method-cohort/jignesh-panchal-buildah.git
     - name: image-repo
       value: quay.io/jigneshkvp/express-assignment-app
   workspaces:
