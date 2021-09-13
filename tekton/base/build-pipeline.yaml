@@ -23,21 +23,9 @@ spec:
       workspaces:
         - name: output
           workspace: shared-area
-    - name: run-tests
-      runAfter:
-        - "clone-repository"
-      taskRef:
-        name: npm
-      params:
-        - name: ARGS
-          value:
-            - install-ci-test
-      workspaces:
-        - name: source
-          workspace: shared-area
     - name: build-and-push-image
       runAfter:
-        - run-tests
+        - clone-repository
       taskRef:
         kind: ClusterTask
         name: buildah
