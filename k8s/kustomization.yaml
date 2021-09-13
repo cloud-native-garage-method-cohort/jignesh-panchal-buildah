@@ -11,4 +11,3 @@ commonLabels:
 images:
 - name: quay.io/upslope/express-sample-app
   newName: quay.io/repository/jigneshkvp/express-assignment-app
-  newTag: 1f4f64c5f5de06561abd5f97828eab66207b7f4c
