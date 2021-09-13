@@ -11,6 +11,8 @@ spec:
       value: https://github.com/cloud-native-garage-method-cohort/jignesh-panchal-buildah.git
     - name: image-repo
       value: quay.io/jigneshkvp/express-assignment-app
+    - name: app-name
+      value: jp-express-assignment-app
   workspaces:
     - name: shared-area
       volumeClaimTemplate:
