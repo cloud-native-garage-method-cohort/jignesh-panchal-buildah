@@ -12,7 +12,7 @@ spec:
     - name: image-repo
       value: quay.io/jigneshkvp/express-assignment-app
     - name: app-name
-      value: jp-express-assignment-app
+      value: express-assign-app
   workspaces:
     - name: shared-area
       volumeClaimTemplate:
